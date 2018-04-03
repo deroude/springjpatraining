@@ -69,8 +69,8 @@ Our application needs to exchange data with a repository (in our case MySQL)
 
 - How does it help?
     - Generate queries / enforce constraints
-    - Enforce constraints
-    - Session / Transaction
+    - Transport / Connection / Serialization management
+    - Session / Transaction management
 
 ---
 
