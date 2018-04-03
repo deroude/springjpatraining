@@ -29,6 +29,45 @@
 
 ---
 
+## Concepts and principles (1)
+
+- Use case
+    - Our application needs to exchange data with a repository (in our case MySQL)
+- Steps
+    - Connect to the DB using a driver
+    - Perform queries to access data according to the business logic
+    - Translate the objects and relations manipulated between Java and the DB
+- Nice to have
+    - Cache frequent hits on the same data
+    - Break dependency on a single DB engine / language
+    - Control the DB definition from a single point
+
+---
+
+## Concepts and principles (2)
+
+- Object-Relational Mapping  (ORM)
+    - What does it map?
+	- Tables to Objects
+	- Fields to Attributes
+	- Relations between Tables (Foreign Keys) to Class Relations (e.g. Composition)
+	- Cursors to Iterators / Collections
+    - How does it help?
+	- Generate queries / enforce constraints
+	- Enforce constraints
+	- Session / Transaction
+
+---
+
+## Concepts and principles (3)
+
+- Entity: Java representation of a Table
+- Column: Java representation of a Field
+- Id: Marks a Primary Key field
+- OneToMany, ManyToOne, ManyToMany: Java representation of FK relations
+
+---
+
 ## Start
 
 - Navigate to the [Spring Boot Initializr resource](https://start.spring.io/)
@@ -53,4 +92,3 @@ Yup, that simple. Now point your browser to `http//localhost:8080/`.
 
 @[13-18](MySQL connection)
 @[2-12](JPA Provider configuration)
-
