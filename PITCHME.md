@@ -6,35 +6,45 @@
 
 ## Goals
 
-- Construct an Angular 5 application:
-    - Navigate between views
-    - Perform CRUD operations
-    - Consume a REST service
-    - Authenticate using an OAuth 2 service
-- Become familiar with Web technologies:
-    - Typescript & Rx
-    - HTML 5
-    - Bootstrap 4 visual elements
-    - CSS / SASS
+- Create a Spring JPA / MySQL web enabled application
+    - Use Spring Boot IoC
+    - Connect to a MySQL DB
+    - Use JPA Domain classes
+    - Use Spring JPA repositories
+    - Expose a simple HAL service for accessing data
+- Become familiar with Java Persistence technologies:
+    - JPA Domain / relationship modeling
+    - Repositories
+    - DB access
+
+---
+
+## Prerequisites
+
+- Java 8
+    - JDK
+    - IDE
+    - Maven
+- Docker
 
 ---
 
 ## Start
 
-```
-ng new AngularTraining --style=scss` 
+- Navigate to the [Spring Boot Initializr resource](https://start.spring.io/)
+- Select `JPA, Web, MySQL, DevTools, Rest Repositories`
+- Download the `zip` file and unpack it
+- `mvn clean install`
+- `mvn spring-boot:run`
 
-ng serve
-```
+Yup, that simple. Now point your browser to `http//localhost:8080/`.
 
-Yup, that simple. Now point your browser to `http//localhost:4200`.
+---?code=pom.xml&lang=xml&title=pom.xml
 
----?code=package.json&lang=json&title=package.json
+@[14-19](Spring parent dependency)
+@[27-56](Dependencies selected from Initializr)
 
-@[14-30](Build dependencies)
-@[32-51](Dev dependencies)
-
----?code=src/index.html&lang=html&title=index.html
+---?code=src/main/resources/application.yaml&lang=yaml&title=application.yaml
 
 @[5](Title)
 @[6](Base)
