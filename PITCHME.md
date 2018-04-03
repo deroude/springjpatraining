@@ -12,14 +12,10 @@
     - Use JPA Domain classes
     - Use Spring JPA repositories
     - Expose a simple HAL service for accessing data
-- Become familiar with Java Persistence technologies:
-    - JPA Domain / relationship modeling
-    - Repositories
-    - DB access
 
 ---
 
-## Prerequisites
+## Prerequisites (Software)
 
 - Java 8
     - JDK
@@ -29,14 +25,26 @@
 
 ---
 
-## Concepts and principles (1)
+## Prerequisites (Knowledge)
 
-- Use case
-    - Our application needs to exchange data with a repository (in our case MySQL)
+- __Java 8__
+- Maven
+- __MySQL__ (or any Relation DB)
+- Docker
+
+---
+
+## Use Case (1)
+
+Our application needs to exchange data with a repository (in our case MySQL)
+
 - Steps
     - Connect to the DB using a driver
     - Perform queries to access data according to the business logic
     - Translate the objects and relations manipulated between Java and the DB
+
+## Use Case (2)
+
 - Nice to have
     - Cache frequent hits on the same data
     - Break dependency on a single DB engine / language
@@ -44,26 +52,30 @@
 
 ---
 
-## Concepts and principles (2)
+## Object-Relational Mapping  (ORM)
 
-- Object-Relational Mapping  (ORM)
-    - What does it map?
-	- Tables to Objects
-	- Fields to Attributes
-	- Relations between Tables (Foreign Keys) to Class Relations (e.g. Composition)
-	- Cursors to Iterators / Collections
-    - How does it help?
-	- Generate queries / enforce constraints
-	- Enforce constraints
-	- Session / Transaction
+- What does it map?
+    - Tables to Objects
+    - Fields to Attributes
+    - Relations between Tables (Foreign Keys) to Class Relations (e.g. Composition)
+    - Cursors to Iterators / Collections
+    
+---
+
+## Object-Relational Mapping  (ORM)
+
+- How does it help?
+    - Generate queries / enforce constraints
+    - Enforce constraints
+    - Session / Transaction
 
 ---
 
-## Concepts and principles (3)
+## Concepts
 
 - Entity: Java representation of a Table
-- Column: Java representation of a Field
 - Id: Marks a Primary Key field
+- Basic: Java representation of a non-relationship Field
 - OneToMany, ManyToOne, ManyToMany: Java representation of FK relations
 
 ---
